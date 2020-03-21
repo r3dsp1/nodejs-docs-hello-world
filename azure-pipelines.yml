@@ -9,13 +9,18 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-- bash:
-ls
-echo "Echo Test"
-echo "running [whoami]"
-whoami
 
 steps:
+
+
+- bash: |
+   ls
+   echo "Jump Line"
+   pwd
+   echo "Jump"
+   whoami
+   ping 1.1.1.1
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
