@@ -17,28 +17,14 @@ steps:
   displayName: 'Install Node.js 10.14'
 
 
-- task: Npm@1
-  displayName: 'npm install'
-  inputs:
-    workingDir: 'cctitan-ui-code'
-    verbose: false
-
-- task: Npm@1
-  displayName: 'install angular cli@latest'
-  inputs:
-    command: custom
-    workingDir: 'cctitan-ui-code'
-    verbose: false
-    customCommand: 'install -g @angular/cli@latest '
 
 - bash: |
-   ls /home/vsts/work/1/s
-   cd cctitan-ui-code 
    ls
-   ng --version
-   ls
-   ng build
-   ls
+   echo "Mark"
+   whoami
+   pwd
+   
+
 
 - script: |
     npm install
