@@ -12,7 +12,6 @@ pool:
 
 steps:
 
-
 - bash: |
    ls
    echo "Jump Line"
