@@ -19,12 +19,11 @@ steps:
    pwd
    echo "Jump"
    whoami
-   ping 1.1.1.1
 
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    versionSpec: '10.14'
+  displayName: 'Install Node.js 10.14'
 
 - script: |
     npm install
