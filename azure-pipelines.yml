@@ -13,21 +13,21 @@ steps:
 
 - script: |
     echo Hello, world!
-    ipconfig
+    ifconfig
     hostname
     pwd
   displayName: 'Script 1'
 
 - script: |
     echo Hello, world!
-    ipconfig
+    ifconfig
     hostname
     pwd
   displayName: 'Script 2'
 
 - script: |
     echo Hello, world!
-    ipconfig
+    ifconfig
     hostname
     pwd
   displayName: 'Script 3'
