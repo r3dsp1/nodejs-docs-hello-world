@@ -11,20 +11,23 @@ pool:
 
 steps:
 
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-- script: |
-    echo third line
-    echo Command Uname
-    uname
-    echo Command ifconfig
-    ifconfig
-    echo Command hostname
+    echo Hello, world!
+    ipconfig
     hostname
-  displayName: 'Run multiple lines of script'
+    pwd
+  displayName: 'Script 1'
+
+- script: |
+    echo Hello, world!
+    ipconfig
+    hostname
+    pwd
+  displayName: 'Script 2'
+
+- script: |
+    echo Hello, world!
+    ipconfig
+    hostname
+    pwd
+  displayName: 'Script 3'
