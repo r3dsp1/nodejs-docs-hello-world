@@ -32,3 +32,39 @@ steps:
     hostname
     pwd
   displayName: 'Script 3'
+
+
+- task: UseNode@1
+  inputs:
+    version: '10.14'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/node.zip'
+    replaceExistingArchive: true
+
+- script: |
+    echo ls
+    ls
+    pwd
+  displayName: 'Check archive'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- script: |
+    echo ls
+    ls
+    pwd
+  displayName: 'Check publish'
