@@ -85,6 +85,12 @@ steps:
     ls -l $(System.DefaultWorkingDirectory)
   displayName: 'Check archive'
 
+- task: ExtractFiles@1
+  inputs:
+    archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/node.zip'
+    destinationFolder: '$(Build.ArtifactStagingDirectory)/check'
+    cleanDestinationFolder: true
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/node.zip'
