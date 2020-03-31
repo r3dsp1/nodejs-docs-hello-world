@@ -16,7 +16,7 @@ steps:
     ifconfig
     hostname
     pwd
-    ping 1.1.1.1
+    ls -l
   displayName: 'Script 1'
 
 - script: |
@@ -24,6 +24,7 @@ steps:
     ifconfig
     hostname
     pwd
+    ls -l
   displayName: 'Script 2'
 
 - script: |
@@ -31,6 +32,7 @@ steps:
     ifconfig
     hostname
     pwd
+    ls -l
   displayName: 'Script 3'
 
 
@@ -53,7 +55,7 @@ steps:
 
 - script: |
     echo ls
-    ls
+    ls -l
     pwd
   displayName: 'Check archive'
 
@@ -65,6 +67,6 @@ steps:
 
 - script: |
     echo ls
-    ls
+    ls -l
     pwd
   displayName: 'Check publish'
