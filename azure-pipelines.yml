@@ -23,8 +23,11 @@ steps:
     echo Hello, world!
     ifconfig
     hostname
+    echo "use pwd"
     pwd
+    echo "use ls -l"
     ls -l
+    echo "use cd"
     cd
     ls -l
   displayName: 'Script 2'
@@ -35,7 +38,9 @@ steps:
     hostname
     pwd
     ls -l
+    echo "$(Build.BinariesDirectory)"
     echo $(Build.BinariesDirectory)
+    echo "$(Build.ArtifactStagingDirectory)"
     echo $(Build.ArtifactStagingDirectory)
   displayName: 'Script 3'
 
