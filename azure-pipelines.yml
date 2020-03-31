@@ -25,6 +25,8 @@ steps:
     hostname
     pwd
     ls -l
+    cd
+    ls -l
   displayName: 'Script 2'
 
 - script: |
@@ -33,6 +35,8 @@ steps:
     hostname
     pwd
     ls -l
+    echo $(Build.BinariesDirectory)
+    echo $(Build.ArtifactStagingDirectory)
   displayName: 'Script 3'
 
 
@@ -43,6 +47,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
+  - script: |
+      echo hello
+    display name: 'hi'
+
+
+
 
 
 - task: ArchiveFiles@2
