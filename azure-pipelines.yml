@@ -38,10 +38,12 @@ steps:
     hostname
     pwd
     ls -l
-    echo "$(Build.BinariesDirectory)"
+    echo "(Build.BinariesDirectory)"
     echo $(Build.BinariesDirectory)
-    echo "$(Build.ArtifactStagingDirectory)"
+    echo "(Build.ArtifactStagingDirectory)"
     echo $(Build.ArtifactStagingDirectory)
+    echo "(System.DefaultWorkingDirectory)"
+    echo $(System.DefaultWorkingDirectory)
   displayName: 'Script 3'
 
 
